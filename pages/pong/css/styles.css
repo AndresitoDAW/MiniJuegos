@@ -1,0 +1,119 @@
+
+header {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    color: aqua;
+}
+:root {
+      --bg: #0f1218;
+      --panel: #141a22;
+      --accent: #4cc9f0;
+      --accent-2: #f72585;
+      --text: #eaeef3;
+      --muted: #9aa4b2;
+    }
+
+    * { box-sizing: border-box }
+    html, body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 16px 0 8px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    .game-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 12px;
+    }
+
+    .canvas-panel {
+      background: var(--panel);
+      border: 2px solid #222a35;
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 65vh;
+      margin: 0 auto;
+      background: black;
+      border-radius: 8px;
+      outline: 1px solid #1e2530;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+      user-select: none;
+    }
+
+    .control-group {
+      background: var(--panel);
+      border: 1px solid #1e2530;
+      border-radius: 12px;
+      padding: 10px;
+    }
+
+    .group-title {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .btn-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    button.ctrl {
+      appearance: none;
+      border: none;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #0b1118;
+      background: var(--text);
+      cursor: pointer;
+      transition: transform 80ms ease, box-shadow 120ms ease, background 120ms ease;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      touch-action: manipulation;
+    }
+
+    button.ctrl:hover { transform: translateY(-1px) }
+    button.ctrl:active { transform: translateY(1px) }
+
+    /* Variantes de color para distinguir lados */
+    .left { background: var(--accent) }
+    .right { background: var(--accent-2) }
+
+    /* Área grande para móvil: ampliar hitbox en pantallas pequeñas */
+    @media (max-width: 480px) {
+      button.ctrl { padding: 18px 20px; font-size: 20px }
+    }
+
+    .footer-tip {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 8px;
+    }

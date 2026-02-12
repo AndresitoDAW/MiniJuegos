@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <h2>Dibuja</h2>
+    <div id="colores">
+        <table id="tablaColores" border="1">
+            <legend>Haga click en un color para comenzar a pintar</legend>
+            <tr>
+                <td>
+                    <input type="button" id="amarillo" onClick="cambiarColor('yellow')">
+                </td>
+                <td>
+                    <input type="button" id="verde" onClick="cambiarColor('green')">
+                </td>
+                <td>
+                    <input type="button" id="black" onClick="cambiarColor('black')">
+                </td>
+                <td>
+                    <input type="button" id="rojo" onClick="cambiarColor('red')">
+                </td>
+                <td>
+                    <input type="button" id="azul" onClick="cambiarColor('blue')">
+                </td>
+                <td>
+                    <input type="button" id="blanco" onClick="cambiarColor('white')">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <input type="button" id="desactivar" value="PINCEL DESACTIVADO..." onClick="desactivarPincel()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <input type="button" id="borrar" value="Borrar todo" onClick="borrarTablero()">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <div id="tablero">
+        <table id="tablaDibujo" border="1">
+            <legend>Haga CLICK en cualquiel celda para activar/desactivar el Pincel</legend>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                 <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            </table>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
